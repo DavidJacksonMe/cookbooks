@@ -11,7 +11,7 @@ log 'message' do
   #db = node[:aws_opsworks_app][:deploy][:app_name][:database]
   #message "Database username - #{db[:username]}, password - #{db[:password]}"
   #message "Database username - #{db}"
-  message "#{node[:opsworks]}"
+  message "#{node[:aws_opsworks_app]}"
   #message "AppShortname - '#{app['shortname']}', Database username - #{app['deploy']['app_name']['database']['username']}, password - #{app['deploy']['app_name']['database']['password']}"
   #message "AppShortname - #{app['shortname']}"
   #message "AppShortname - #{app[:shortname]}"
