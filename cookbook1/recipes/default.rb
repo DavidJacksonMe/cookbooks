@@ -12,6 +12,7 @@ log 'message' do
   #message "Database username - #{db[:username]}, password - #{db[:password]}"
   #message "Database username - #{db}"
   message "aws_opsworks_app=#{node[:aws_opsworks_app]}"
+  message "aws_opsworks_rds_db_instance=#{node[:aws_opsworks_rds_db_instance]}"
   #message "AppShortname - '#{app['shortname']}', Database username - #{app['deploy']['app_name']['database']['username']}, password - #{app['deploy']['app_name']['database']['password']}"
   #message "AppShortname - #{app['shortname']}"
   #message "AppShortname - #{app[:shortname]}"
