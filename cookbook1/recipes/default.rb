@@ -21,7 +21,7 @@ log 'message' do
   #message "AppShortname - #{app['shortname']}"
   #
   #message "data_sources - #{app['data_sources']}"
-  message "rds_db_instance - db_user=#{rds_db_instance['db_user']}, db_password=#{rds_db_instance['db_password']}"
+  message "rds_db_instance - db_user=#{rds_db_instance['db_user']}, db_password=#{rds_db_instance['db_password']}, my_custom_json=#{node['my_custom_json']}"
   #
   #message "deploy attributes - #{node[:deploy]}"
   #message "deploy attributes - #{deploy_attrs}"
