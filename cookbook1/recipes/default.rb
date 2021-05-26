@@ -4,10 +4,11 @@
 #
 # Copyright:: 2021, The Authors, All Rights Reserved.
 #db = search(:node, "database").first
-#db = node[:aws_opsworks_app][:deploy][:app_name][:database]
-#db = node[:aws_opsworks_app][:deploy][:app_name][:database]
-#app = search("aws_opsworks_app").first
-deploy_attrs = search(:node, "deploy").first
+#
+app = search("aws_opsworks_app").first
+rds_db_instance = search("aws_opsworks_rds_db_instance").first
+#
+#deploy_attrs = search(:node, "deploy").first
 log 'message' do
   #app = search(:node, "aws_opsworks_app").first
   #app = search("aws_opsworks_app")
@@ -18,9 +19,12 @@ log 'message' do
   #message "aws_opsworks_rds_db_instance=#{node[:aws_opsworks_rds_db_instance]}"
   #message "AppShortname - '#{app['shortname']}', Database username - #{app['deploy']['app_name']['database']['username']}, password - #{app['deploy']['app_name']['database']['password']}"
   #message "AppShortname - #{app['shortname']}"
+  #
   #message "data_sources - #{app['data_sources']}"
-  message "deploy attributes - #{node[:deploy]}"
-  message "deploy attributes - #{deploy_attrs}"
+  message "rds_db_instance - db_user=#{rds_db_instance['db_user']}, db_password=#{rds_db_instance['db_password']}"
+  #
+  #message "deploy attributes - #{node[:deploy]}"
+  #message "deploy attributes - #{deploy_attrs}"
   #message "AppShortname - #{app[:shortname]}"
   #message "AppShortname - #{app[:shortname]}, Database username - #{app[:deploy][:app_name][:database][:username]}, password - #{app[:deploy][:app_name][:database][:password]}"
   level :info
