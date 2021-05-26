@@ -16,7 +16,8 @@ log 'message' do
   #message "aws_opsworks_app=#{node[:aws_opsworks_app]}"
   #message "aws_opsworks_rds_db_instance=#{node[:aws_opsworks_rds_db_instance]}"
   #message "AppShortname - '#{app['shortname']}', Database username - #{app['deploy']['app_name']['database']['username']}, password - #{app['deploy']['app_name']['database']['password']}"
-  message "AppShortname - #{app['shortname']}"
+  #message "AppShortname - #{app['shortname']}"
+  message "data_sources - #{app['data_sources']}"
   #message "AppShortname - #{app[:shortname]}"
   #message "AppShortname - #{app[:shortname]}, Database username - #{app[:deploy][:app_name][:database][:username]}, password - #{app[:deploy][:app_name][:database][:password]}"
   level :info
